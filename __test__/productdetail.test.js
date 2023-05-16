@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ProductDetail from "./index";
+import ProductDetail from "../components/ProductDetail/index";
 
 describe("ProductDetail", () => {
   const mockProduct = {

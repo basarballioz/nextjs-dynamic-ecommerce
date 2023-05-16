@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
-import Header from "./index";
+import Header from "../components/Header/index";
 
 describe("Header", () => {
   const mockOnSearch = jest.fn();

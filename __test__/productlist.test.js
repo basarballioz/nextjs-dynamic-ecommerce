@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { useRouter } from "next/router";
-import ProductList from "./index";
+import ProductList from "../components/ProductList/index";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),

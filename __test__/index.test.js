@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
-import Home from "./index";
+import Home from "../pages/index";
 import { useRouter } from "next/router";
 import "@testing-library/jest-dom/extend-expect";
 
