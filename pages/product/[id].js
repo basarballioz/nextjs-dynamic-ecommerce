@@ -54,7 +54,7 @@ const ProductDetailPage = ({ product }) => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-8 flex items-center justify-center h-screen">
+      <div className="product-detail-container container mx-auto px-4 py-8 flex items-center justify-center h-screen">
         <div className="pdp-sub-container flex">
           <div className="pdp-main-container">
             <div className="product-container max-w-5xl mx-auto flex">

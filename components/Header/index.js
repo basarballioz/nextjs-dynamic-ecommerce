@@ -37,7 +37,7 @@ const Header = ({ onSearch, cartItems }) => {
         </div>
         <div className="hidden md:flex md:flex-grow md:justify-center">
           <form onSubmit={handleSearchSubmit}>
-            <div className="flex items-center space-x-2 bg-white rounded">
+            <div className="flex items-center space-x-2 rounded">
               <input
                 type="text"
                 className="bg-white text-gray-800 py-1 px-4 rounded"
@@ -77,9 +77,9 @@ const Header = ({ onSearch, cartItems }) => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div className="md:hidden mt-2">
+        <div className="md:hidden mt-4">
           <form onSubmit={handleSearchSubmit}>
-            <div className="flex items-center space-x-2 bg-white rounded">
+            <div className="flex items-center space-x-2 justify-center rounded">
               <input
                 type="text"
                 className="bg-white text-gray-800 py-1 px-4 rounded"

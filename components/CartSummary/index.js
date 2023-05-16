@@ -44,7 +44,7 @@ const CartSummary = ({ cartItems }) => {
         </div>
 
         <div className="checkout-area mt-4">
-          <h3 className="checkout-title">
+          <h3 className="checkout-title w-full">
             Total Price:
             <span className="cart-total ml-1">
               {totalCartAmount.toFixed(2)}$

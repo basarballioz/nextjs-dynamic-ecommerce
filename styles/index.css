@@ -4,7 +4,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f9f9f9;
+  background-color: #ecebeb;
 }
 
 :root {
@@ -124,4 +124,40 @@ body {
   padding: 20px;
   gap: 10px;
   border-radius: 4px;
+}
+
+/* PRODUCT LIST */
+@media screen and (max-width: 1120px) {
+  .product-list,
+  .pdp-sub-container {
+    flex-direction: column;
+  }
+  .cart-area {
+    margin: 1rem 1rem 0rem 1rem;
+  }
+  .cart-sum,
+  .checkout-area {
+    width: 100%;
+  }
+  .pdp-cart-summary {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .filter-area {
+    margin: 0 auto 1rem auto;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+  .product-image,
+  .product-details {
+    width: 100%;
+  }
+  .product-details {
+    margin-left: 0;
+  }
+  .product-detail-container {
+    height: 100%;
+  }
 }
