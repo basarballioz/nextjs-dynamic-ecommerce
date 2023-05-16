@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f9f9f9;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* FITLER AREA */
+.filter-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  height: 100%;
+  gap: 15px;
+  position: relative;
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* CART SUMMARY */
+.cart-sum,
+.checkout-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 15px;
+  position: relative;
+  width: 300px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cart-sum-title {
+  text-decoration: underline;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.cart-total {
+  font-weight: bold;
+  color: #2a59fe;
+}
+
+.product-price {
+  color: #2a59fe;
+}
+
+/* PRODUCT LIST */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  width: 80%;
+  margin: 2rem auto;
+
+  column-gap: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination__page {
+  display: inline-block;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.pagination__link {
+  display: inline-block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background-color: #fff;
+}
+
+.pagination__link:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination__link--active {
+  color: rgb(37 99 235);
+  font-weight: bold;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(162, 170, 180, 0.25);
+  border-radius: 6px;
+  padding: 3px 10px;
+}
+
+.pagination__link--disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination__break {
+  margin: 0 8px;
+}
+
+/* PRODUCT DETAIL */
+.product-container {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: flex-start;
+  padding: 20px;
+  gap: 10px;
+  border-radius: 4px;
+}
