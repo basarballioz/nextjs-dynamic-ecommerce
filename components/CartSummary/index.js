@@ -23,7 +23,7 @@ const CartSummary = ({ cartItems }) => {
   return (
     <>
       <div className="cart-area">
-        <div className="cart-sum">
+        <div className="cart-sum mr-4">
           <h3 className="cart-sum-title">Cart Summary</h3>
           <ul>
             {Object.values(groupedItems).map((item) => (

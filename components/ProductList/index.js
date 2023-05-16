@@ -25,7 +25,7 @@ const ProductList = ({
 
   return (
     <div className="flex justify-center product-list mt-9">
-      <div className="filter-area filter-container mb-4">
+      <div className="filter-area filter-container mb-4 ml-4">
         <label htmlFor="brand" className="font-bold text-lg mb-2">
           Filter Brands:
         </label>
