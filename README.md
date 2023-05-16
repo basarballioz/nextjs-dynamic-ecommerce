@@ -44,11 +44,12 @@ npm run dev
 npm test
 ```
 
-## IF API SERVICE CRASHES, YOU CAN START JSONSERVER LOCAL IN ORDER TO WORK WITH DUMMY DATA :)
+## IF API SERVICE CRASHES, YOU CAN START JSONSERVER LOCAL (IN ORDER TO WORK WITH DUMMY DATA)
 
 ### HOW TO RUN IT
 
 ```
+npm install -g json-server
 json-server --watch db.json --port 3001 
 ```
 Then, run the development environment (npm run dev)
