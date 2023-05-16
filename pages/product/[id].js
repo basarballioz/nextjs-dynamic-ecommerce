@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import CartSummary from "../../components/CartSummary";
+import config from "../../config/config";
 
 const ProductDetailPage = ({ product }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -94,9 +95,8 @@ const ProductDetailPage = ({ product }) => {
 
 export async function getStaticPaths() {
   try {
-    const response = await axios.get(
-      "https://5fc9346b2af77700165ae514.mockapi.io/products"
-    );
+    const response = await axios.get(`${config.apiURL}`);
+
     const products = response.data;
     const paths = products.map((product) => ({
       params: { id: product.id.toString() },
@@ -111,9 +111,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const response = await axios.get(
-      `https://5fc9346b2af77700165ae514.mockapi.io/products/${params.id}`
-    );
+    const response = await axios.get(`${config.apiURL}/${params.id}`);
+    
     const product = response.data;
     return { props: { product } };
   } catch (error) {

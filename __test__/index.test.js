@@ -4,6 +4,7 @@ import MockAdapter from "axios-mock-adapter";
 import Home from "../pages/index";
 import { useRouter } from "next/router";
 import "@testing-library/jest-dom/extend-expect";
+import config from "../config/config";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),
@@ -32,9 +33,7 @@ describe("Home", () => {
       { id: 2, name: "Product 2", brand: "Brand 2" },
     ];
 
-    mock
-      .onGet("https://5fc9346b2af77700165ae514.mockapi.io/products")
-      .reply(200, mockProducts);
+    mock.onGet(`${config.apiURL}`).reply(200, mockProducts);
 
     mockRouter.mockImplementation(() => ({
       push: jest.fn(),
@@ -54,9 +53,7 @@ describe("Home", () => {
       { id: 2, name: "Product 2", brand: "Brand 2" },
     ];
 
-    mock
-      .onGet("https://5fc9346b2af77700165ae514.mockapi.io/products")
-      .reply(200, mockProducts);
+    mock.onGet(`${config.apiURL}`).reply(200, mockProducts);
 
     mockRouter.mockImplementation(() => ({
       push: jest.fn(),

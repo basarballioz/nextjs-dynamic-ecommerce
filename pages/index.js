@@ -5,6 +5,7 @@ import axios from "axios";
 import ProductList from "../components/ProductList";
 import ReactPaginate from "react-paginate";
 import Header from "../components/Header";
+import config from "../config/config";
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -19,9 +20,7 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "https://5fc9346b2af77700165ae514.mockapi.io/products"
-      );
+      const response = await axios.get(`${config.apiURL}`);
 
       const filtered = response.data.filter(
         (product) =>
