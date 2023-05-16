@@ -44,6 +44,17 @@ npm run dev
 npm test
 ```
 
+## IF API SERVICE CRASHES, YOU CAN START JSONSERVER LOCAL IN ORDER TO WORK WITH DUMMY DATA :)
+
+### HOW TO RUN IT
+
+```
+json-server --watch db.json --port 3001 
+```
+Then, run the development environment (npm run dev)
+Lastly go into **config/config.js** and change **apiURL** variable to http://localhost:3001/data (default jsonserver port and endpoint)
+
+
 ## Contributing
 - Contributions are welcome! If you find any issues or want to contribute to the project, feel free to open a pull request.
 
