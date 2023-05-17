@@ -5,6 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import CartSummary from "../../components/CartSummary";
 import config from "../../config/config";
+import Header from "../../components/Header";
 
 const ProductDetailPage = ({ product }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -55,6 +56,7 @@ const ProductDetailPage = ({ product }) => {
 
   return (
     <>
+      <Header cartItems={cartItems} />
       <div className="product-detail-container container mx-auto px-4 py-8 flex items-center justify-center h-screen">
         <div className="pdp-sub-container flex">
           <div className="pdp-main-container">
@@ -112,7 +114,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   try {
     const response = await axios.get(`${config.apiURL}/${params.id}`);
-    
+
     const product = response.data;
     return { props: { product } };
   } catch (error) {

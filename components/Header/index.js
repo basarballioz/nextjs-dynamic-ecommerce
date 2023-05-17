@@ -6,7 +6,9 @@ const Header = ({ onSearch, cartItems }) => {
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
-    onSearch(event.target.value);
+    if (typeof onSearch === "function") {
+      onSearch(event.target.value);
+    }
   };
 
   const totalCartAmount = cartItems?.reduce(
