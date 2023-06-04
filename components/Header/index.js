@@ -35,7 +35,7 @@ const Header = ({ onSearch, cartItems }) => {
           className="text-xl font-bold cursor-pointer"
           onClick={handleGoHome}
         >
-          ETERATION
+          NEXTJS
         </div>
         <div className="hidden md:flex md:flex-grow md:justify-center">
           <form onSubmit={handleSearchSubmit}>
