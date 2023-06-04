@@ -1,3 +1,3 @@
 export default {
-  apiURL: "http://localhost:3001/data",
+  apiURL: "https://ecommerce-api-provider.vercel.app/data",
 };
