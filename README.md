@@ -1,6 +1,6 @@
 # Next.js Dynamic Ecommerce
 
-This is a sample Next.js project for a dynamic ecommerce website.
+This is a demo Next.js project for a dynamic ecommerce website.
 
 ## Getting Started
 
